@@ -63,6 +63,8 @@ namespace nc
         ImGui::DragFloat3("Position", &m_transform.position[0]);
         ImGui::DragFloat3("Rotation", &m_transform.rotation[0]);
         ImGui::DragFloat3("Scale", &m_transform.scale[0]);
+        ImGui::DragFloat2("UV Offset", &uvOffset[0]);
+        ImGui::DragFloat2("UV Tiling", &uvTiling[0]);
         ImGui::End();
 
         
@@ -77,8 +79,8 @@ namespace nc
 
         m_time += dt;
 
-        m_program->SetUniform("offset", glm::vec2{ m_time, 0 });
-        m_program->SetUniform("tiling", glm::vec2{ 64, 64 });
+        m_program->SetUniform("offset", uvOffset);
+        m_program->SetUniform("tiling", uvTiling);
 
         //model matrix
         //glm::mat4 position = glm::translate(glm::mat4{ 1 }, m_position);
