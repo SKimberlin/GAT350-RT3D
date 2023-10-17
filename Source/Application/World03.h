@@ -19,10 +19,14 @@ namespace nc
 
 		Transform m_transform;
 
-		GLuint m_vao;
 		res_t<Program> m_program;
 		res_t<Texture> m_texture;
+		res_t<VertexBuffer> m_vertexBuffer;
+		res_t<Material> m_material;
+
 		glm::vec2 uvOffset{ 0 };
 		glm::vec2 uvTiling{ 1 };
+
+		
 	};
 }
