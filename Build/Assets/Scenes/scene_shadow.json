@@ -1,0 +1,119 @@
+{
+	"actors": [
+		{
+			"type": "Actor",
+			"name": "tower1",
+			"persistent": true,
+			"transform": {
+				"position": [ 10, 0, -10 ],
+				"scale": [ 0.5, 0.5, 0.5 ],
+				"rotation": [ 0, 0, 0 ]
+			},
+			"components": [
+				{
+					"type": "ModelComponent",
+					"modelName": "Simple_Fantasy/Obj/SF_Bld_Castle_TallTower_01.obj",
+					"materialName": "Simple_Fantasy/fantasy.mtrl"
+				}
+			]
+		},
+		{
+			"type": "Actor",
+			"name": "tower2",
+			"persistent": true,
+			"transform": {
+				"position": [ 10, 0, -15 ],
+				"scale": [ 0.5, 0.5, 0.5 ],
+				"rotation": [ 0, 0, 0 ]
+			},
+			"components": [
+				{
+					"type": "ModelComponent",
+					"modelName": "Simple_Fantasy/Obj/SF_Bld_Castle_TallTower_01.obj",
+					"materialName": "Simple_Fantasy/fantasy.mtrl"
+				}
+			]
+		},
+		{
+			"type": "Actor",
+			"name": "ground",
+			"persistent": true,
+			"transform": {
+				"position": [ 0, 0, 0 ],
+				"scale": [ 10, 10, 10 ],
+				"rotation": [ 0, 0, 0 ]
+			},
+			"components": [
+				{
+					"type": "ModelComponent",
+					"modelName": "Simple_Fantasy/Obj/SF_Env_Tile_Grass_01.obj",
+					"materialName": "simple_fantasy/ground.mtrl"
+				}
+			]
+		},
+		{
+			"type": "Actor",
+			"name": "depth_debug",
+			"persistent": true,
+			"transform": {
+				"position": [ 2.4, 1.4, 0 ],
+				"scale": [ 1, 1, 1 ],
+				"rotation": [ 0, 0, 0 ]
+			},
+			"components": [
+				{
+					"type": "ModelComponent",
+					"modelName": "models/quad.obj",
+					"materialName": "materials/sprite.mtrl"
+				}
+			]
+		},
+		{
+			"type": "Actor",
+			"name": "camera1",
+			"persistent": true,
+			"transform": {
+				"position": [ 0, 0, 3 ],
+				"scale": [ 1, 1, 1 ],
+				"rotation": [ 0, 180, 0 ]
+			},
+			"components": [
+				{
+					"type": "CameraComponent",
+					"fov": 70,
+					"aspect": 1.77,
+					"near": 0.1,
+					"far": 100
+				},
+				{
+					"type": "CameraController",
+					"speed": 3,
+					"sensitivity": 0.1
+				}
+			]
+		},
+		{
+			"type": "Actor",
+			"name": "light1",
+			"persistent": true,
+			"transform": {
+				"position": [ 0, 3, 0 ],
+				"scale": [ 1, 1, 1 ],
+				"rotation": [ 90, 0, 0 ]
+			},
+			"components": [
+				{
+					"type": "LightComponent",
+					"lightType": "directional",
+					"color": [ 1, 1, 1 ],
+					"intensity": 1,
+					"range": 20,
+					"innerAngle": 10,
+					"outerAngle": 30,
+					"castShadow": true
+
+				}
+			]
+		}
+	]
+}

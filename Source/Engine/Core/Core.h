@@ -14,3 +14,4 @@
 #include "Math/Transform.h"
 #include "Math/MathUtils.h"
 
+#include "StringUtils.h"

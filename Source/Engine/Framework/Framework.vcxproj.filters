@@ -22,7 +22,7 @@
     <ClCompile Include="Scene.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="Components\ModelRenderComponent.cpp">
+    <ClCompile Include="Components\ModelComponent.cpp">
       <Filter>Source\Components</Filter>
     </ClCompile>
     <ClCompile Include="Components\EnginePhysicsComponent.cpp">
@@ -36,6 +36,18 @@
     </ClCompile>
     <ClCompile Include="Engine.cpp">
       <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\LightComponent.cpp">
+      <Filter>Source\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\CameraComponent.cpp">
+      <Filter>Source\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\CameraController.cpp">
+      <Filter>Source\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\RotateComponent.cpp">
+      <Filter>Source\Components</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -60,7 +72,7 @@
     <ClInclude Include="Components\RenderComponent.h">
       <Filter>Source\Components</Filter>
     </ClInclude>
-    <ClInclude Include="Components\ModelRenderComponent.h">
+    <ClInclude Include="Components\ModelComponent.h">
       <Filter>Source\Components</Filter>
     </ClInclude>
     <ClInclude Include="Components\PhysicsComponent.h">
@@ -95,6 +107,18 @@
     </ClInclude>
     <ClInclude Include="System.h">
       <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\LightComponent.h">
+      <Filter>Source\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\CameraComponent.h">
+      <Filter>Source\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\CameraController.h">
+      <Filter>Source\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\RotateComponent.h">
+      <Filter>Source\Components</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

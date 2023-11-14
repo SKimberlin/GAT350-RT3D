@@ -1,0 +1,12 @@
+{
+  "program": "shaders/refraction.prog",
+  "cubemap": "hotel_cubemap",
+  "cubemaps": [
+    "textures/hotel_cubemap/posx.jpg",
+    "textures/hotel_cubemap/negx.jpg",
+    "textures/hotel_cubemap/posy.jpg",
+    "textures/hotel_cubemap/negy.jpg",
+    "textures/hotel_cubemap/posz.jpg",
+    "textures/hotel_cubemap/negz.jpg"
+  ]
+}

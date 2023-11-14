@@ -57,16 +57,23 @@ namespace nc
 			GL_FALSE);
 
 		glViewport(0, 0, width, height);
+
 		glEnable(GL_BLEND);
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
 		glEnable(GL_DEPTH_TEST);
 		glDepthFunc(GL_LESS);
 
+		glEnable(GL_CULL_FACE);
+		glCullFace(GL_BACK);
+		glFrontFace(GL_CCW);
+
 	}
 
-	void Renderer::BeginFrame() {
-
-		glClearColor(0, 0, 0, 1);
+	void Renderer::BeginFrame(const glm::vec3 color)
+	{
+		glDepthMask(GL_TRUE);
+		glClearColor(color.r, color.g, color.b, 1);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	}
@@ -75,6 +82,11 @@ namespace nc
 
 		SDL_GL_SwapWindow(m_window);
 
+	}
+
+	void Renderer::ClearDepth()
+	{
+		glClear(GL_DEPTH_BUFFER_BIT);
 	}
 
 	void Renderer::SetColor(uint8_t r, uint8_t g, uint8_t b, uint8_t a)
@@ -100,6 +112,15 @@ namespace nc
 	void Renderer::DrawPoint(float x, float y)
 	{
 		SDL_RenderDrawPointF(m_renderer, x, y);
+	}
+
+	void Renderer::SetViewport(int width, int height)
+	{
+		glViewport(0, 0, width, height);
+	}
+	void Renderer::ResetViewport()
+	{
+		glViewport(0, 0, m_width, m_height);
 	}
 
 	void APIENTRY DebugCallback(GLenum source, GLenum type, GLuint id,
