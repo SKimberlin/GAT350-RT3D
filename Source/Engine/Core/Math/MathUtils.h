@@ -50,27 +50,28 @@ namespace nc
 	}
 
 	template<typename T>
-	constexpr T SetBits(T a, T b)
+	constexpr T SetBits(T target, T pattern)
 	{
-		return a | b;
+		return target | pattern;
 	}
 
 	template<typename T>
-	constexpr T ClearBits(T a, T b)
+	constexpr T ClearBits(T target, T mask)
 	{
-		return a & (~b);
+		return target & ~mask;
+	}
+
+	// Tests if all bits in target are set in check
+	template<typename T>
+	constexpr T TestBits(T target, T check)
+	{
+		return (target & check) == check;
 	}
 
 	template<typename T>
-	constexpr T TestBits(T a, T b)
+	constexpr T ToggleBits(T target, T toggle)
 	{
-		return (a & b) == b;
-	}
-
-	template<typename T>
-	constexpr T ToggleBits(T a, T b)
-	{
-		return a ^ b;
+		return target ^ toggle;
 	}
 
 	// convert euler angles (degrees) to a quaternion

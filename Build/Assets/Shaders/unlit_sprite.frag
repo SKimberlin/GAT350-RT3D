@@ -13,10 +13,6 @@ uniform struct Material
 	vec2 offset;
 } material;
 
-uniform vec4 color;
-uniform vec2 offset;
-uniform vec2 tiling;
-
 layout(binding = 0) uniform sampler2D tex;
 
 void main()

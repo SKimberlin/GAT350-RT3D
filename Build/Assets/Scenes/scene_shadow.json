@@ -55,6 +55,7 @@
 			"type": "Actor",
 			"name": "depth_debug",
 			"persistent": true,
+			"active": false,
 			"transform": {
 				"position": [ 2.4, 1.4, 0 ],
 				"scale": [ 1, 1, 1 ],
@@ -98,8 +99,8 @@
 			"persistent": true,
 			"transform": {
 				"position": [ 0, 3, 0 ],
-				"scale": [ 1, 1, 1 ],
-				"rotation": [ 90, 0, 0 ]
+				"scale": [ 0.1, 0.1, 0.1 ],
+				"rotation": [ 20, 140, 0 ]
 			},
 			"components": [
 				{
@@ -112,6 +113,11 @@
 					"outerAngle": 30,
 					"castShadow": true
 
+				},
+				{
+					"type": "ModelComponent",
+					"modelName": "models/quad.obj",
+					"materialName": "materials/ui_light.mtrl"
 				}
 			]
 		}
